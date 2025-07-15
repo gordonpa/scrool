@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour {
     Rigidbody mRb;
 
     void OnCollisionEnter(Collision other) {
-        if (other.gameObject.tag == "Fire" || other.gameObject.tag == "Wall") {
+        if (other.gameObject.tag == "Fire" || other.gameObject.tag == "Wall" || other.gameObject.tag == "death") {
             anim.SetTrigger("isDead");
             isDead = true;
         } else
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour {
         mRb.angularVelocity = Vector3.zero;
 
         // 为 magic 对象的刚体添加力，使其沿玩家的 forward 方向飞行
-        mRb.AddForce(this.transform.forward * 40000);
+        mRb.AddForce(this.transform.forward * 25, ForceMode.VelocityChange);
 
         // 调用 KillMagic 方法，在 1 秒后将 magic 对象停用
         Invoke("KillMagic", 1);

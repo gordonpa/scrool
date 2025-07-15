@@ -38,7 +38,7 @@ public class MainMenuController : MonoBehaviour
 
     public void LoadGameScene()
     {
-        SceneManager.LoadScene("ScrollingWorld", LoadSceneMode.Single);
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 
     public void QuitGame()

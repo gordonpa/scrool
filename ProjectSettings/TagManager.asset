@@ -13,6 +13,10 @@ TagManager:
   - Wall
   - Fire
   - Spell
+  - subpanel
+  - mmbutton
+  - gamedata
+  - death
   layers:
   - Default
   - TransparentFX
